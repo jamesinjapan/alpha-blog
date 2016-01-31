@@ -1,18 +1,134 @@
-<h1>Listing all articles</h1>
-<p><%= link_to "Create new article", new_article_path %></p>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-  </tr>
-  
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.description %></td>
-      <td><%= link_to "Edit", edit_article_path(article) %></td>
-      <td><%= link_to "Show", article_path(article) %></td>
-    </tr>
-  <% end %>
-  
-</table>
+<html>
+  <head>
+    <title>AlphaBlog: About</title>
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700|Oswald|Droid+Sans|Ubuntu:400,500' rel='stylesheet' type='text/css'>
+    <style>
+      body {
+        background: black;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+        padding: 0;
+        margin: 0 auto;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+      }
+      .header {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        float: left;
+      }
+      h1 {
+        font-family: 'Montserrat', sans-serif;
+        padding-left: 20px;
+      }
+     h1 a {
+        color: white;
+        text-decoration: none;
+      }
+      .navbar {
+        position: absolute;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 500;
+        color: white;
+        left: 300px;
+        top: 25px;
+      }
+      .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .navbar li {
+        float: left;
+      }
+      .navbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+      }
+      .navbar li a:hover:not(.active) {
+        color: #3f3f3f;
+      }
+      .banner {
+        margin: 0 auto;
+        padding: 0;
+        float: left;
+        overflow: hidden;
+      }
+      .banner img {
+        border-top: white 2px solid;
+        border-bottom: white 2px solid;
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+      .banner h2 {
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
+        left: 20px;
+        bottom: 50px;
+        padding: 0;
+        margin: 0 0 -30px 0;
+        width: 100%;
+        z-index: 1;
+      }
+      .content {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        float: left;
+      }
+      .content p {
+        padding: 5px 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1><%= link_to 'AlphaBlog', root_path %></h1>
+        <div class="navbar">
+          <ul>
+            <li><%= link_to 'Home', root_path %></li>
+            <li><%= link_to 'About', about_path %></li>
+            <li><%= link_to 'Articles', articles_path %></li>
+          </ul>
+          
+        </div>
+      </div>
+      <div class="banner">
+        <img src="/images/home.header.jpg" width="100%">
+        <h2>Listing all articles</h2>
+      </div>
+      <div class="content">
+        <p><%= link_to "Create new article", new_article_path %></p>
+        <table>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+          </tr>
+          
+          <% @articles.each do |article| %>
+            <tr>
+              <td><%= article.title %></td>
+              <td><%= article.description %></td>
+              <td><%= link_to "Edit", edit_article_path(article) %></td>
+              <td><%= link_to "Show", article_path(article) %></td>
+              <td><%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"} %></td>
+            </tr>
+          <% end %>
+          
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
