@@ -5,11 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:700|Oswald|Droid+Sans|Ubuntu:400,500' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
-<%= render 'layouts/messages' %>
-<%= yield %>
-
+  <%= render 'layouts/navigation' %>
+  <%= render 'layouts/messages' %>
+  <div class="container">
+    <%= yield %>
+  </div>
+  <%= render 'layouts/footer' %>
 </body>
 </html>

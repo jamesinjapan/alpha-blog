@@ -1,3 +1,103 @@
+$navbar-default-bg: #3f3f3f;
+
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float:left;
+  font-size: 1.7em;
+  color: #fff;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('home.header.jpg');
+  background-size: cover;
+  height: 500px;
+  padding: 25px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  text-shadow: 2px 2px #040404;
+}
+
+.jumbotron p {
+  color: #fff;
+  text-align: center;
+  letter-spacing: -1px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  text-shadow: 2px 2px #040404;
+}
+
+.jumbotron #call-to-action {
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.btn-signup {
+  font-size: 1.7em;
+  background-color: #689C00;
+  border: #040404 1px solid;
+  color: #fff;
+  margin-right: 20px;
+}
+
+.btn-signup:hover {
+  background-color: #2E4500;
+  color: #6f6f6f;
+}
+
+.btn-learnmore {
+  font-size: 1.7em;
+  background-color: #D90000;
+  border: #040404 1px solid;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.btn-learnmore:hover {
+  background-color: #770000;
+  color: #6f6f6f;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float:left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
