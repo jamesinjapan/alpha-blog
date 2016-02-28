@@ -98,9 +98,21 @@ body {
 }
 
 .article-actions {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #434343;
   padding-top: 15px;
   text-transform: uppercase;
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 1px solid #434343;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  
 }
 
 footer {
