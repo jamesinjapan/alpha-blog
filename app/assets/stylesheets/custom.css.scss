@@ -32,6 +32,15 @@ body {
   text-align: center;
 }
 
+.strong {
+  font-weight: 400;
+}
+
+.well {
+  background-color: #040904;
+  border: 1px solid #434343;
+}
+
 .jumbotron {
   background-image: asset-url('home.header.jpg');
   background-position: center;
@@ -86,6 +95,12 @@ body {
 .btn-learnmore:hover {
   background-color: #770000;
   color: #6f6f6f;
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  text-transform: uppercase;
 }
 
 footer {
